@@ -629,7 +629,10 @@ public class RefreshView extends FrameLayout implements Refresh{
 	/*整体移动相对的单位距离*/
 	private void moveBy(float dy)
 	{
-		
+		if (adapter==null)
+		{
+			throw new IllegalArgumentException("adapter can't null");
+		}
 		if (mChildView==null&&getChildCount()>0) {
 			mChildView=getChildAt(0);
 			distance.child_top=0;
@@ -755,6 +758,13 @@ public class RefreshView extends FrameLayout implements Refresh{
 	/*整体移动到绝对的位置*/
 	private void moveTo(float y)
 	{
+		
+		if (adapter==null)
+		{
+			throw new IllegalArgumentException("adapter can't null");
+		}
+		
+		
 		if (mChildView==null&&getChildCount()>0) {
 			mChildView=getChildAt(0);
 			distance.child_top=0;
