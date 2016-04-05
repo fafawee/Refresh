@@ -80,6 +80,7 @@ public class RefreshView extends FrameLayout implements Refresh{
 	}
 	public RefreshView(Context context) {
 		super(context);
+		init();
 		// TODO Auto-generated constructor stub
 		
 		
