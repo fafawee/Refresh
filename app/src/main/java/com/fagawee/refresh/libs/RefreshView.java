@@ -90,8 +90,6 @@ public class RefreshView extends FrameLayout implements Refresh{
 	/*初始化*/
 	private void init()
 	{
-		screenWidth=getContext().getResources().getDisplayMetrics().widthPixels;
-		screenHeight=getContext().getResources().getDisplayMetrics().heightPixels-getStatusBarHeight();
 		distance=new Distance(); 
 
 		
@@ -99,6 +97,8 @@ public class RefreshView extends FrameLayout implements Refresh{
 			
 			@Override
 			public void run() {
+				screenWidth=getWidth();
+				screenHeight=getHeight();
 				if (getChildCount()>1) {
 					return ;
 				}
