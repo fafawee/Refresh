@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.fagawee.refresh"
+    android:id="@+id/lin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#363535" >
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="40dp"
+            android:layout_height="40dp" 
+            android:layout_toLeftOf="@+id/refresh_text"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="50dp">
+
+            <com.fagawee.refresh.circularprogressview.CircularProgressView
+                android:id="@+id/refresh_arrow_progress"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                app:cpv_thickness="2dp"
+                app:cpv_animAutostart="true"
+                app:cpv_color="#d0cece"
+                android:visibility="invisible"
+                app:cpv_indeterminate="true" />
+
+            <ImageView
+                android:id="@+id/refresh_arrow_icon"
+                android:layout_width="19dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:src="@drawable/refresh_arrow_down_icon" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:text="正在刷新..." />
+    </RelativeLayout>
+
+</LinearLayout>
